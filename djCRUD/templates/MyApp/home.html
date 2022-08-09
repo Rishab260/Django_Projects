@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'home' %}">List of Companies....!!</a>
+<a href="/create/">AddNewLogo</a><br>
+{% for obj in orglist %}
+<a href="{{ obj.get_absolute_url}}">{{ obj.id }}.{{ obj.company_name }}
+    {% if obj.company_logo %}<img src="{{ obj.company_logo.url}}"/>
+    {% endif %}</a>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/MyFile.css' %}"/>
+</head>
+<body>
+<h1>List Of Empoloyess Are....!!!</h1>
+{% if elist %}
+<table border="1px">
+    <thead>
+    <th>EMPID</th>
+    <th>EMPNAME</th>
+    <th>EMPSAL</th>
+    <th>EMPADD</th>
+    </thead>
+    {% for emp in elist %}
+    <tr>
+        <td>{{ emp.EmpId}}</td>
+        <td>{{ emp.EmpName}}</td>
+        <td>{{ emp.EmpSal}}</td>
+        <td>{{ emp.EmpAdd}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h2>Sorry Data Not Found in the Database...!!</h2>
+{% endif %}
+</body>
+</html>

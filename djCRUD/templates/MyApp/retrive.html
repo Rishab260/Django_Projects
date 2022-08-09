@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'home' %}">List of Companies</a>
+{{ x.company_name}} details <br/>
+company Id:{{ x.id }}<br>
+company Image:<img src="{{ x.company_logo.url }}"><br>
+company City:{{ x.company_city }}<br>
+</body>
+</html>

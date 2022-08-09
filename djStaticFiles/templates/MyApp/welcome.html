@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Template Language</title>
+    <link href="{% static 'css/MyFile.css' %}" rel='stylesheet'/>
+</head>
+<body>
+<h1>{{dt}}</h1>
+<h2>{{name}}</h2>
+<h3>{{wish}}</h3>
+<img src="{% static 'images/dj.png' %}" alt="SorryNoImage"/>
+<img src="{% static 'images/IElections.png' %}" alt="SorryNoImage"/>
+</body>
+</html>

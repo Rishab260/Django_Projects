@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for item in datalist %}
+<ul>
+    <li>{{item.name|upper}}</li>
+    <li>{{item.subject|upper}}</li>
+    <li>{{item.dept|upper}}</li>
+    <li>{{item.date|date:"d-m-Y"}}</li>
+</ul><hr>
+{% endfor %}
+</body>
+</html>
